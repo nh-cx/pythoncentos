@@ -1,9 +1,10 @@
 #!/usr/bin/python3.6
 # -*- coding=utf-8 -*-
 # 学习专用
-import paramiko,re
+import paramiko
+import re
 # 创建SSH对象
-ssh =paramiko.SSHClient()
+ssh = paramiko.SSHClient()
 # 允许连接不在know_hosts文件中的主机
 # 第一次登陆的认证信息
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
