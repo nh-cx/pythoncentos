@@ -4,6 +4,7 @@
 
 import os
 import re
+import scapy
 
 GetString = os.popen('route -n').read()
 
