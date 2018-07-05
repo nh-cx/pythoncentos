@@ -4,7 +4,7 @@
 
 import re
 
-cmd_str = 'Port-channel1.189	192.168.189.254	YES	CONFIG	up'
+cmd_str = 'Port-channel1.189    192.168.189.250 YES CONFIG  up'
 
 string_unformated = re.match('(.*)\s+(.*)\s+(.*)\s+(.*)\s+(.*)', cmd_str).groups()
 
