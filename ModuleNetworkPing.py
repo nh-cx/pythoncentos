@@ -9,7 +9,7 @@ def icmp_packet(host):
     parameter like '192.168.1.1'
     return strType
     """
-    ping_pkt = IP(dst=host) / ICMP()
+    ping_pkt = IP(dst=host) / ICMP() / Raw(RandString(size=32))
     ping_result = sr1(ping_pkt, timeout=2, verbose=False)
     if ping_result:
         return 'have reply'
