@@ -19,8 +19,8 @@ class Person:
 
 
 if __name__ == "__main__":
-    Tom = Person('Tom', 19, 3500, 'Assistant')
+    Tom = Person('Tom Smith', 19, 3500, 'Assistant')
     print(Tom.lastName())
     print(Tom.job)
-    print()
+    print('')
     print(Tom)
