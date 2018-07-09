@@ -9,16 +9,14 @@ class Manager(Person):
     def giveRaise(self, percent, bonus = 0.1):
         Person.giveRaise(self,percent + bonus)
 
-    # def __str__(self):
-    #     self.job = 'manager'
-    #     Person.__str__(self)
+
 
 if __name__ == "__main__":
     bob = Person('Bob Smith', 42, 30000, 'software')
     sue = Person('Sue Jones',45, 40000, 'hardware')
-    tom = Person(name= 'Tom Doe', age= 50, pay=50000)
+    tom = Manager('Tom Doe', 50, 50000)
     print(sue,sue.pay,sue.lastName())
 
     for obj in (bob,sue,tom):
-        obj.giveRaise(.10)
+        obj.giveRaise(0.1)
         print(obj)
