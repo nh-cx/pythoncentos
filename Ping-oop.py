@@ -4,15 +4,16 @@
 from scapy.all import *
 import time
 
+
 class oop_ping:
     def __init__(self, ip, length=32):
         self.ip = ip
         self.length = length
 
-    def src(self,srcip):
+    def src(self, srcip):
         self.ip = srcip
 
-    def size(self,length):
+    def size(self, length):
         self.length = length
 
     def one(self):
@@ -25,7 +26,7 @@ class oop_ping:
 
     def ping(self):
         ping_pkt = IP(dst=self.ip) / ICMP() / Raw(RandString(size=self.length))
-        for i in range(1,5):
+        for i in range(1, 5):
             ping_result = sr1(ping_pkt, timeout=2, verbose=False)
             if ping_result:
                 print('have reply')
