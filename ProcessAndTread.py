@@ -14,7 +14,12 @@ import random
 # 有效控制并发进程或者线程数，不设置为内核数
 # 得到内核数的方法
 # cpus = multiprocessing.cpu_count()
+
+# ProcessPool是多进程
 pool = ProcessPool(processes=4)
+
+# ThreadPool是多线程
+# pool = ThreadPool()
 
 results = []
 for i in range(0, 10):
