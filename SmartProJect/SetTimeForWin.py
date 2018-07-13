@@ -2,10 +2,9 @@
 # -*- coding=utf-8 -*-
 # 学习专用
 # ======程序说明======
-#
-#
+# 时间校准，GetAdjustTime函数返回时间格式
+# os.system()执行时间校准操作
 # ==================
-import os
 import time
 import ntplib
 
@@ -20,4 +19,5 @@ def GetAdjustTime():
 
 
 if __name__ == "__main__":
+    import os
     os.system(GetAdjustTime())
