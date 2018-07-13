@@ -17,11 +17,11 @@ import random
 pool = ProcessPool(processes=4)
 
 results = []
-for i in range(0,10):
-    x = random.randint(1,10)
-    y = random.randint(1,10)
-    z = random.randint(1,10)
-    result = pool.apply_async(math_multi,args=(x,y,z))
+for i in range(0, 10):
+    x = random.randint(1, 10)
+    y = random.randint(1, 10)
+    z = random.randint(1, 10)
+    result = pool.apply_async(math_multi, args=(x, y, z))
     results.append(result)
 
 # pool.apply_async采用异步方式调用task
